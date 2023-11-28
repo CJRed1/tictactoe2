@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic tac toe</title>
+
+    <!-- CSSs -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/victory.css">
+</head>
+<body>
+    <!-- <iframe src="https://chromedino.com/" frameborder="0" scrolling="no" width="100%" height="100%" loading="lazy"></iframe>
+    <style type="text/css">iframe { position: absolute; width: 100%; height: 28%; z-index: 999; margin-top: -105px; }</style> -->
+    <!--Tablero -->
+    
+    
+    <section class="game">
+        <div class="table">
+            <!--Row 1----------------------------------------->
+            <div class="row1">
+                <!--Square 1--------------------------------------------------> 
+                <div class="square" id="square1">
+                    <div class="circle" id="circle1"></div>
+                    <div class="theX" id="theX1">X</div>
+                </div>
+                <!--Square 1--------------------------------------------------> 
+            
+                <!--Square 2--------------------------------------------------> 
+                <div class="square" id="square2">
+                    <div class="circle" id="circle2"></div>
+                    <div class="theX" id="theX2">X</div>
+                </div>
+                <!--Square 2--------------------------------------------------> 
+                            
+                <!--Square 3--------------------------------------------------> 
+                <div class="square" id="square3">
+                    <div class="circle" id="circle3"></div>
+                    <div class="theX" id="theX3">X</div>
+                </div>
+                <!--Square 3--------------------------------------------------> 
+ 
+
+            </div>
+            <!--Row 2----------------------------------------->
+            <div class="row2">
+                <!--Square 4--------------------------------------------------> 
+                <div class="square" id="square4">
+                    <div class="circle" id="circle4"></div>
+                    <div class="theX" id="theX4">X</div>
+                </div>
+                <!--Square 4--------------------------------------------------> 
+            
+                <!--Square 5--------------------------------------------------> 
+                <div class="square" id="square5">
+                    <div class="circle" id="circle5"></div>
+                    <div class="theX" id="theX5">X</div>
+                </div>
+                <!--Square 5--------------------------------------------------> 
+                            
+                <!--Square 6--------------------------------------------------> 
+                <div class="square" id="square6">
+                    <div class="circle" id="circle6"></div>
+                    <div class="theX" id="theX6">X</div>
+                </div>
+                <!--Square 6--------------------------------------------------> 
+ 
+
+            </div>
+            <!--Row 3----------------------------------------->
+            <div class="row3">
+                <!--Square 7--------------------------------------------------> 
+                <div class="square" id="square7">
+                    <div class="circle" id="circle7"></div>
+                    <div class="theX" id="theX7">X</div>
+                </div>
+                <!--Square 7--------------------------------------------------> 
+            
+                <!--Square 8--------------------------------------------------> 
+                <div class="square" id="square8">
+                    <div class="circle" id="circle8"></div>
+                    <div class="theX" id="theX8">X</div>
+                </div>
+                <!--Square 8--------------------------------------------------> 
+                            
+                <!--Square 9--------------------------------------------------> 
+                <div class="square" id="square9">
+                    <div class="circle" id="circle9"></div>
+                    <div class="theX" id="theX9">X</div>
+                </div>
+                <!--Square 9--------------------------------------------------> 
+            </div>
+        </div>
+        <hr class="hr1">
+        <hr class="hr2">
+        <hr class="hr3">
+        <hr class="hr4">
+    </section>
+
+    <div>
+        <video width="240" height="240" autoplay loop>
+            <source src="./nocky.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Winning Section -->
+
+    <section class="won" id="win">
+        <div class="content2">
+            <div class="title">
+                <h1 id="title">Hello</h1>
+            </div>
+            <div class="button">
+                <button id="replay">Rematch</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    
+    <script src="./JS/tictactoe.js"></script>
+</body>
+</html>

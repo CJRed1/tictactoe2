@@ -1,0 +1,41 @@
+.won {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    top: 100rem;
+}
+
+.content2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 2000;
+    top: 0;
+}
+
+.title {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+    margin-top: 50px;
+    width: 100vw;
+    height: 30vh;
+}
+
+.button {
+    position: absolute;
+    top: 28rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
