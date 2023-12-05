@@ -40,15 +40,19 @@ let replay = document.getElementById('replay')
 
 //------------------------------------VARS------------------------------------//
 //---------------------------------FUNCTIONS----------------------------------//
-function winO() {
+function winO(var1=0) {
     victory.style.top = '0rem'
     victory.style.transition = '.5s'
     victoryTxt.textContent = 'O wins!'
+
+    document.getElementById('line' + var1).style.opacity = 1
 }
-function winX() {
+function winX(var1=0) {
     victory.style.top = '0rem'
     victory.style.transition = '.5s'
     victoryTxt.textContent = 'X wins!'
+
+    document.getElementById('line' + var1).style.opacity = 1
 }
 
 function draw() {
@@ -65,34 +69,34 @@ function checker(){
             // "O"s
                 // Horizontal
                 case slots[0] == 'O' && slots[3] == 'O' && slots[6] == 'O':
-                    winO()
+                    winO(0)
                     break
                 case slots[1] == 'O' && slots[4] == 'O' && slots[7] == 'O':
-                    winO()
+                    winO(1)
                     break
                 case slots[2] == 'O' && slots[5] == 'O' && slots[8] == 'O':
-                    winO()
+                    winO(2)
                     break
                 // Horizontal
 
                 // Vertical
                 case slots[0] == 'O' && slots[1] == 'O' && slots[2] == 'O':
-                    winO()
+                    winO(3)
                     break
                 case slots[3] == 'O' && slots[4] == 'O' && slots[5] == 'O':
-                    winO()
+                    winO(4)
                     break
                 case slots[6] == 'O' && slots[7] == 'O' && slots[8] == 'O':
-                    winO()
+                    winO(5)
                     break
                 // Vertical
 
                 // Diagonal
                 case slots[0] == 'O' && slots[4] == 'O' && slots[8] == 'O':
-                    winO()
+                    winO(6)
                     break
                 case slots[2] == 'O' && slots[4] == 'O' && slots[6] == 'O':
-                    winO()
+                    winO(7)
                     break
                 // Diagonal
             // "O"s
@@ -100,34 +104,34 @@ function checker(){
             // "X"s
                 // Horizontal
                 case slots[0] == 'X' && slots[3] == 'X' && slots[6] == 'X':
-                    winX()
+                    winX(0)
                     break
                 case slots[1] == 'X' && slots[4] == 'X' && slots[7] == 'X':
-                    winX()
+                    winX(1)
                     break
                 case slots[2] == 'X' && slots[5] == 'X' && slots[8] == 'X':
-                    winX()
+                    winX(2)
                     break
                 // Horizontal
 
                 // Vertical
                 case slots[0] == 'X' && slots[1] == 'X' && slots[2] == 'X':
-                    winX()
+                    winX(3)
                     break
                 case slots[3] == 'X' && slots[4] == 'X' && slots[5] == 'X':
-                    winX()
+                    winX(4)
                     break
                 case slots[6] == 'X' && slots[7] == 'X' && slots[8] == 'X':
-                    winX()
+                    winX(5)
                     break
                 // Vertical
 
                 // Diagonal
                 case slots[0] == 'X' && slots[4] == 'X' && slots[8] == 'X':
-                    winX()
+                    winX(6)
                     break
                 case slots[2] == 'X' && slots[4] == 'X' && slots[6] == 'X':
-                    winX()
+                    winX(7)
                     break
                 // Diagonal
             // "X"s
@@ -194,6 +198,10 @@ replay.addEventListener("click", () => {
     for (let i = 0; i < slots.length; i++){
         circles[i].style.opacity = 0
         theXes[i].style.opacity = 0
+    }
+
+    for (let i = 0; i < 8; i++){  
+        document.getElementById('line' + i).style.opacity = 0
     }
 
     checker()
